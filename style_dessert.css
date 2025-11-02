@@ -1,0 +1,132 @@
+body {
+  font-family: 'Georgia', serif;
+  background: url('orderbg3.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-y: scroll;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+header .decor {
+  width: 50px;
+  height: auto;
+}
+
+.tagline {
+  font-style: italic;
+  color: #ddd;
+}
+
+.menu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.menu-card {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  color: #fff;
+  overflow: hidden;
+  background: rgba(50, 50, 50, 0.9);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.menu-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.left {
+  align-self: flex-start;
+  max-width: 60%;
+}
+
+.right {
+  align-self: flex-end;
+  max-width: 60%;
+}
+
+.menu-card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #ffdd99;
+}
+
+.menu-card p {
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.menu-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.4s ease;
+}
+
+.menu-card:hover ul {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.menu-card ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.traditional::before {
+  background-image: url('indian_sweet.jpg');
+}
+
+.western::before {
+  background-image: url('western_sweet.jpg');
+}
+
+.icecream::before {
+  background-image: url('icecream.jpg');
+}
+
+.menu-card:hover::before {
+  opacity: 1;
+}

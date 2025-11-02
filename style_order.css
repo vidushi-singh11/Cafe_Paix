@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("orderbg3.jpg") no-repeat center center fixed;
+    background-size: cover; /* ensures full screen cover */
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #070707;
+  box-shadow: 0 2px 5px rgba(253, 252, 252, 0.918);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fefdfd;
+}
+
+.menu-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.menu-category {
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.menu-header img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.category-info h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #030303;
+}
+
+.category-info p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #0e0e0e;
+}
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fcfcfc;
+  border-top: 1px solid #eee;
+  text-align: center;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.menu-category:hover .menu-items {
+  max-height: 300px;
+  padding: 0.5rem 0;
+  overflow-y: auto;
+}
+
+.menu-items li {
+  padding: 0.4rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #030303;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-items li:last-child {
+  border-bottom: none;
+}
+
+.menu-items li:hover {
+  background: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+/* --- Generic Menu Category --- */
+.menu-category .menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+/* On hover expand */
+.menu-category:hover .menu-items {
+  max-height: 500px; /* enough for subsections */
+  padding: 0.6rem 0;
+  overflow-y: auto;
+}
+
+/* List items */
+.menu-category .menu-items li {
+  padding: 0.55rem 0;
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.menu-category .menu-items li:last-child {
+  border-bottom: none;
+}
+.menu-category .menu-items li:hover {
+  background: rgba(255,255,255,0.08);
+  cursor: pointer;
+}
+
+/* --- Subsection Titles --- */
+.menu-category .menu-items .submenu-title {
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffd700;   /* default accent color */
+  text-transform: uppercase;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  cursor: default;
+}
+/* Beverages */
+.menu-category.beverages .menu-items {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("beverage-bg.jpg");
+}
+
+/* Desserts */
+.menu-category.desserts .menu-items {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("dessertbg.jpg");
+}
+.menu-category.desserts .menu-items .submenu-title {
+  color: #ff7eb3;  /* Pink accent for desserts */
+}
+
+/* Main Course */
+.menu-category.maincourse .menu-items {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("maincoursebg.jpg");
+}
+
+/* Starters */
+.menu-category.starters .menu-items {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("starters.jpg");
+}
+
+
